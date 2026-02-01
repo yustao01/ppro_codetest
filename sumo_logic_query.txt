@@ -1,0 +1,4 @@
+_sourceCategory="web_application_logs"
+| json "endpoint", "response_time"
+| where endpoint = "/api/data" and response_time > 3000
+| count by endpoint
